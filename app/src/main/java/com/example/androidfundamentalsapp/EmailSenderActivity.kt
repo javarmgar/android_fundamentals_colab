@@ -3,6 +3,9 @@ package com.example.androidfundamentalsapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
+import android.view.ActionMode
 import android.view.View
 import android.widget.Button
 import java.util.Stack
@@ -11,8 +14,11 @@ import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
 class EmailSenderActivity : AppCompatActivity() {
+    var TAG = "EmailSenderActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate()")
         setContentView(R.layout.activity_email_sender)
 
         val textMessage = "javo"
@@ -51,6 +57,37 @@ class EmailSenderActivity : AppCompatActivity() {
             startActivity(sendIntent)
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart()")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause()")
+    }
+
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "onRestart()")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop()")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy()")
     }
 
     fun String.printStandardFunction() {
