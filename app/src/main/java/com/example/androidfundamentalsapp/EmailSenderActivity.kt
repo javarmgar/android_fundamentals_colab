@@ -15,6 +15,22 @@ import kotlin.contracts.contract
 
 class EmailSenderActivity : AppCompatActivity() {
     var TAG = "EmailSenderActivity"
+    private lateinit var button: Button
+
+    private val address:String = "Lago Xapala 47".apply {
+        Log.d(TAG,this)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        Log.d(TAG,"onSaveInstanceState()")
+        super.onSaveInstanceState(outState)
+    }
+
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        Log.d(TAG,"onRestoreInstanceState()")
+        super.onRestoreInstanceState(savedInstanceState)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -35,14 +51,25 @@ class EmailSenderActivity : AppCompatActivity() {
         }
         sendIntent.apply(lambda)
 
-        sendIntent.apply{
+        sendIntent.run{
             action = Intent.ACTION_SEND
             type = "text/plain"
             putExtra(Intent.EXTRA_TEXT,textMessage)
         }
 
-        val printNumber: () -> Unit = {
+        var name = "Jabier"
+        var fullName = name.run{
+            this + " Harmentha"
+        }.run{
+            this + " Garzia"
+        }
+        Log.d(TAG,fullName)
 
+        (fullName + address).apply {
+            Log.d(TAG,this)
+        }
+
+        val printNumber: () -> Unit = {
             -> println("havs")
         }
         textMessage.print()
@@ -52,7 +79,7 @@ class EmailSenderActivity : AppCompatActivity() {
         pila.push(3)
         pila.push(1)
 
-        val button:Button = findViewById(R.id.button)
+        button = findViewById(R.id.button)
         button.setOnClickListener{
             startActivity(sendIntent)
         }
@@ -112,6 +139,11 @@ class EmailSenderActivity : AppCompatActivity() {
     fun lambdaMethod() = {
         println("Jaby")
         println("Jaby")
+
+    }
+
+
+    fun test() {
 
     }
 }
