@@ -1,21 +1,20 @@
 package com.example.androidfundamentalsapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.view.ActionMode
-import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import java.util.Stack
-import kotlin.contracts.ExperimentalContracts
-import kotlin.contracts.InvocationKind
-import kotlin.contracts.contract
+
 
 class EmailSenderActivity : AppCompatActivity() {
+    private lateinit var mainActivityViewModel: MainActivityViewModel
     var TAG = "EmailSenderActivity"
     private lateinit var button: Button
+    var flag:Boolean = false
 
     private val address:String = "Lago Xapala 47".apply {
         Log.d(TAG,this)
@@ -36,6 +35,9 @@ class EmailSenderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate()")
         setContentView(R.layout.activity_email_sender)
+
+
+        mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
 
         val textMessage = "javo"
         val sendIntent = Intent()
@@ -84,7 +86,29 @@ class EmailSenderActivity : AppCompatActivity() {
             startActivity(sendIntent)
         }
 
+        val finishButton:Button = findViewById(R.id.button2)
+        finishButton.setOnClickListener{
+            finish()
+            flag = true
+        }
+
+        val changeVariableButton:Button = findViewById(R.id.changeVariableButton)
+        val variableTextView:TextView =  findViewById(R.id.variable)
+        val variableViewModelTextView:TextView = findViewById(R.id.viewModelTextView)
+        changeVariableButton.setOnClickListener {
+            variableTextView.text = "Havi"
+            mainActivityViewModel.changeVariable("Havi")
+            variableViewModelTextView.text = mainActivityViewModel.variable
+
+        }
+        variableViewModelTextView.text = mainActivityViewModel.variable
+
+
+
     }
+
+
+
 
     override fun onStart() {
         super.onStart()
@@ -115,6 +139,11 @@ class EmailSenderActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy()")
+        if(flag){
+            Log.d(TAG,"finish() called")
+        }else{
+            Log.d(TAG,"other exit")
+        }
     }
 
     fun String.printStandardFunction() {
