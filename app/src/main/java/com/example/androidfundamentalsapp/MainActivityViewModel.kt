@@ -12,8 +12,13 @@ class MainActivityViewModel : ViewModel() {
         Log.d(TAG,"onCleared()")
     }
 
+
     fun changeVariable(s: String) {
         variable = s
+    }
+
+    fun getDatabaseName():String{
+        return Database.DB_NAME
     }
 
 }

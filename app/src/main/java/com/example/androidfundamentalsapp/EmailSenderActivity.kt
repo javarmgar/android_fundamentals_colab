@@ -38,7 +38,7 @@ class EmailSenderActivity : AppCompatActivity() {
 
 
         mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-
+        Log.d(TAG,mainActivityViewModel.getDatabaseName())
         val textMessage = "javo"
         val sendIntent = Intent()
 
