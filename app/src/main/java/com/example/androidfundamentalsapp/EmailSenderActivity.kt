@@ -7,6 +7,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import patterns.observer.ConcreteObservee
+import patterns.observer.ConcreteObserver
+import patterns.observer.ConcreteObserverTwo
 import java.util.Stack
 
 
@@ -33,11 +36,34 @@ class EmailSenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreate()")
         setContentView(R.layout.activity_email_sender)
 
-
+        //ViewModel
         mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        //OBSERVER PATTERN
+        val concreteObserver: ConcreteObserver = ConcreteObserver()
+        val concreteObserverTwo: ConcreteObserverTwo = ConcreteObserverTwo()
+
+
+        mainActivityViewModel.personaLiveData.observe(this){
+            Log.d(TAG,"$it")
+        }
+
+
+        mainActivityViewModel.observee.addObserver(concreteObserver)
+        mainActivityViewModel.observee.addObserver(concreteObserverTwo)
+
+        val buttonUpdateObservee: Button = findViewById(R.id.buttonUpdateObservee)
+        buttonUpdateObservee.setOnClickListener {
+            mainActivityViewModel.updateObservee()
+            mainActivityViewModel.updateLiveData()
+        }
+
+
+
+        Log.d(TAG, "onCreate()")
+
+
         Log.d(TAG,mainActivityViewModel.getDatabaseName())
         val textMessage = "javo"
         val sendIntent = Intent()
