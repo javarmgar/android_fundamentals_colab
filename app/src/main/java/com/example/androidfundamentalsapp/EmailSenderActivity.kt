@@ -7,13 +7,17 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import patterns.observer.ConcreteObservee
+import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.ADDRESS_KEY
+import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.LAST_NAME_KEY
+import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.NAME_KEY
 import patterns.observer.ConcreteObserver
 import patterns.observer.ConcreteObserverTwo
 import java.util.Stack
 
 
 class EmailSenderActivity : AppCompatActivity() {
+    private lateinit var pickupContactButton: Button
+
     private lateinit var mainActivityViewModel: MainActivityViewModel
     var TAG = "EmailSenderActivity"
     private lateinit var button: Button
@@ -130,10 +134,45 @@ class EmailSenderActivity : AppCompatActivity() {
         variableViewModelTextView.text = mainActivityViewModel.variable
 
 
+        // START ACTIVITY FOR RESULT EXAMPLE
+        pickupContactButton = findViewById(R.id.pickUpButton)
+        pickupContactButton.setOnClickListener {
+            val pickUpContactIntent = Intent(this ,PickUpContactActivity::class.java).apply{
+                putExtra(CONTACT_ID_KEY,3)
+            }
+            startActivityForResult(
+                pickUpContactIntent,
+                PICK_UP_CONTACT_REQUEST_ID
+            )
+        }
 
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when(requestCode){
+            PICK_UP_CONTACT_REQUEST_ID -> {
+                Log.d(TAG,"onActivityResult() - 'PICK_UP_CONTACT_REQUEST_ID'")
+                when(resultCode){
+                    RESULT_OK -> {
+                        data?.let {
+                            Log.d(TAG,data.getStringExtra(NAME_KEY)?:"")
+                            Log.d(TAG,data.getStringExtra(LAST_NAME_KEY)?:"")
+                            Log.d(TAG,data.getStringExtra(ADDRESS_KEY)?:"")
+                        }
+                    }
+                    RESULT_CANCELED ->{
+                        Log.d(TAG,"RESULT_CANCELED")
+                    }
 
+                }
+            }
+            else ->{
+                Log.d(TAG,"onActivityResult() - 'UNKNOWN'")
+
+            }
+        }
+    }
 
 
     override fun onStart() {
@@ -200,5 +239,10 @@ class EmailSenderActivity : AppCompatActivity() {
 
     fun test() {
 
+    }
+
+    companion object{
+        private val PICK_UP_CONTACT_REQUEST_ID = 42
+        val CONTACT_ID_KEY = "CONTACT_ID_KEY"
     }
 }
