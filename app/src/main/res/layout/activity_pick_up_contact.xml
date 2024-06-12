@@ -38,4 +38,48 @@
         android:layout_height="80dp"
         android:text="third button" />
 <!--    android:layout_gravity="end"-->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PickUpContactActivity"
+        android: ="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/nested_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:padding="15dp"
+            android:text="Back and Finish" />
+
+        <Button
+            android:id="@+id/nested_cancel_button"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:paddingHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESULT CANCEL" />
+
+        <Button
+            android:id="@+id/nested_third_button"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:paddingHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="80dp"
+            android:text="third button" />
+        <!--    android:layout_gravity="end"-->
+
+    </LinearLayout>
+
 </LinearLayout>
