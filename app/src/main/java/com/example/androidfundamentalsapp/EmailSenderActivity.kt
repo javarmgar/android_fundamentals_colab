@@ -125,10 +125,14 @@ class EmailSenderActivity : AppCompatActivity() {
         val changeVariableButton:Button = findViewById(R.id.changeVariableButton)
         val variableTextView:TextView =  findViewById(R.id.variable)
         val variableViewModelTextView:TextView = findViewById(R.id.viewModelTextView)
+
+        //TODO Create a new button to separate functionality @javarmgar
         changeVariableButton.setOnClickListener {
             variableTextView.text = "Havi"
             mainActivityViewModel.changeVariable("Havi")
             variableViewModelTextView.text = mainActivityViewModel.variable
+            val intentLinearLayout = Intent(this,LinearLayoutActivity::class.java)
+            startActivity(intentLinearLayout)
 
         }
         variableViewModelTextView.text = mainActivityViewModel.variable

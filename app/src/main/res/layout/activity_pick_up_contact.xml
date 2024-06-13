@@ -1,85 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PickUpContactActivity"
-    android: ="center_horizontal"
-    android:orientation="vertical">
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".PickUpContactActivity">
 
     <Button
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:padding="15dp"
-        android:text="Back and Finish" />
+        android:text="Back and Finish"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="57dp"
+        tools:layout_conversion_absoluteWidth="130dp" />
 
     <Button
         android:id="@+id/cancel_button"
-        android:paddingVertical="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        android:paddingHorizontal="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RESULT CANCEL" />
+        android:layout_marginBottom="12dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="RESULT CANCEL"
+        app:layout_constraintBottom_toTopOf="@+id/third_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="123dp" />
 
     <Button
         android:id="@+id/third_button"
-        android:paddingVertical="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        android:paddingHorizontal="8dp"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginBottom="13dp"
         android:gravity="center_vertical"
-        android:layout_height="80dp"
-        android:text="third button" />
-<!--    android:layout_gravity="end"-->
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="third button"
+        app:layout_constraintBottom_toTopOf="@+id/nested_third_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="80dp"
+        tools:layout_conversion_absoluteWidth="300dp" />
+    <!--    android:layout_gravity="end"-->
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".PickUpContactActivity"
-        android: ="center_horizontal"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/nested_back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="4dp"
-            android:padding="15dp"
-            android:text="Back and Finish" />
+    <Button
+        android:id="@+id/nested_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="433dp"
+        android:padding="15dp"
+        android:text="Back and Finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nested_cancel_button"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/third_button"
+        tools:layout_conversion_absoluteHeight="57dp"
+        tools:layout_conversion_absoluteWidth="130dp" />
 
-        <Button
-            android:id="@+id/nested_cancel_button"
-            android:paddingVertical="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:paddingHorizontal="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RESULT CANCEL" />
+    <Button
+        android:id="@+id/nested_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="RESULT CANCEL"
+        app:layout_constraintEnd_toStartOf="@+id/nested_third_button"
+        app:layout_constraintStart_toEndOf="@+id/nested_back_button"
+        app:layout_constraintTop_toTopOf="@+id/nested_back_button"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="123dp" />
 
-        <Button
-            android:id="@+id/nested_third_button"
-            android:paddingVertical="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:paddingHorizontal="8dp"
-            android:layout_width="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_height="80dp"
-            android:text="third button" />
-        <!--    android:layout_gravity="end"-->
+    <Button
+        android:id="@+id/nested_third_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="425dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="third button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nested_cancel_button"
+        app:layout_constraintTop_toBottomOf="@+id/third_button"
+        tools:layout_conversion_absoluteHeight="80dp"
+        tools:layout_conversion_absoluteWidth="91dp" />
+    <!--    android:layout_gravity="end"-->
 
-    </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

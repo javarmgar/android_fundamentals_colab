@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".LinearLayoutActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2E1616"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <!-- Search Bak-->
+        <EditText
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:layout_height="40dp"
+            android:hint="Search Apps"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="40dp"
+            android:text="Notification"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="40dp"
+            android:text="Photo"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#3A487A"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="8dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:text="For you"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="8dp"
+            android:layout_margin="8dp"
+            android:text="For you"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="8dp"
+            android:layout_margin="8dp"
+            android:text="For you"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="8dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:text="For you"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#2E1616"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <View
+                android:layout_margin="8dp"
+                android:layout_width="50dp"
+                android:background="@color/black"
+                android:layout_height="50dp"/>
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Temu: Shop Like a Billionarie"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shopping Online marketplace"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.6* 36MB"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <View
+                android:layout_margin="8dp"
+                android:layout_width="50dp"
+                android:background="@color/black"
+                android:layout_height="50dp"/>
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Temu: Shop Like a Billionarie"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shopping Online marketplace"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.6* 36MB"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <View
+                android:layout_margin="8dp"
+                android:layout_width="50dp"
+                android:background="@color/black"
+                android:layout_height="50dp"/>
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Temu: Shop Like a Billionarie"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shopping Online marketplace"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.6* 36MB"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="#2E1616"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="8dp"
+            android:gravity="center"
+
+            android:layout_margin="8dp"
+            android:text="Games"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingVertical="8dp"
+            android:gravity="center"
+
+            android:paddingStart="8dp"
+            android:layout_margin="8dp"
+            android:text="Apps"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:paddingStart="8dp"
+            android:layout_margin="8dp"
+            android:text="Books"/>
+    </LinearLayout>
+
+</LinearLayout>
