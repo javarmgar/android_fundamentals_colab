@@ -16,6 +16,11 @@ import java.util.Stack
 
 
 class EmailSenderActivity : AppCompatActivity() {
+
+    private lateinit var constraintLayoutButton: Button
+    private lateinit var relativeLayoutButton: Button
+    private lateinit var linearLayoutButton: Button
+
     private lateinit var pickupContactButton: Button
 
     private lateinit var mainActivityViewModel: MainActivityViewModel
@@ -126,13 +131,13 @@ class EmailSenderActivity : AppCompatActivity() {
         val variableTextView:TextView =  findViewById(R.id.variable)
         val variableViewModelTextView:TextView = findViewById(R.id.viewModelTextView)
 
-        //TODO Create a new button to separate functionality @javarmgar
+        //TODO Create a new button to separate functionality @javarmgar x2
+
         changeVariableButton.setOnClickListener {
             variableTextView.text = "Havi"
             mainActivityViewModel.changeVariable("Havi")
             variableViewModelTextView.text = mainActivityViewModel.variable
-            val intentLinearLayout = Intent(this,LinearLayoutActivity::class.java)
-            startActivity(intentLinearLayout)
+
 
         }
         variableViewModelTextView.text = mainActivityViewModel.variable
@@ -150,6 +155,24 @@ class EmailSenderActivity : AppCompatActivity() {
             )
         }
 
+        linearLayoutButton = findViewById(R.id.linear_layout_button)
+        relativeLayoutButton = findViewById(R.id.relative_layout_button)
+        constraintLayoutButton = findViewById(R.id.constraint_layout_button)
+
+        linearLayoutButton.setOnClickListener {
+            val intentLinearLayout = Intent(this,LinearLayoutActivity::class.java)
+            startActivity(intentLinearLayout)
+        }
+
+        relativeLayoutButton.setOnClickListener {
+            val intentRelativeLayout = Intent(this, RelativeLayoutActivity::class.java)
+            startActivity(intentRelativeLayout)
+        }
+
+        constraintLayoutButton.setOnClickListener {
+            val intentConstraintLayout = Intent(this, ConstraintLayoutActivity::class.java)
+            startActivity(intentConstraintLayout)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
