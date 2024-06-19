@@ -1,5 +1,6 @@
 # Built application files
 .gradle/
+.gradle/*
 *.apk
 *.aar
 *.ap_

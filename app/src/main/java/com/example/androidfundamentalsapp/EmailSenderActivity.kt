@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -17,6 +18,7 @@ import java.util.Stack
 
 class EmailSenderActivity : AppCompatActivity() {
 
+    private lateinit var viewsActivityButton: Button
     private lateinit var constraintLayoutButton: Button
     private lateinit var relativeLayoutButton: Button
     private lateinit var linearLayoutButton: Button
@@ -173,6 +175,15 @@ class EmailSenderActivity : AppCompatActivity() {
             val intentConstraintLayout = Intent(this, ConstraintLayoutActivity::class.java)
             startActivity(intentConstraintLayout)
         }
+
+        // START OF VIEWS ACTIVITY SESSION
+        viewsActivityButton = findViewById<Button>(R.id.views_button)
+        viewsActivityButton.setOnClickListener {
+
+            val intentViewsActivity = Intent(this,ViewsActivity::class.java)
+            startActivity(intentViewsActivity)
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

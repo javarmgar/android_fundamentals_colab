@@ -118,6 +118,13 @@
                 android:layout_margin="16dp"
                 android:text="Open Constraint Layout"
                 />
+
+            <Button
+                android:id="@+id/views_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Views Activity"
+                />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
