@@ -4,13 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.ADDRESS_KEY
 import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.LAST_NAME_KEY
 import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.NAME_KEY
+import com.example.androidfundamentalsapp.layouts.ConstraintLayoutActivity
+import com.example.androidfundamentalsapp.layouts.LinearLayoutActivity
+import com.example.androidfundamentalsapp.layouts.RelativeLayoutActivity
+import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
+import com.example.androidfundamentalsapp.views.TextViewActivity
 import patterns.observer.ConcreteObserver
 import patterns.observer.ConcreteObserverTwo
 import java.util.Stack
@@ -18,7 +22,10 @@ import java.util.Stack
 
 class EmailSenderActivity : AppCompatActivity() {
 
-    private lateinit var viewsActivityButton: Button
+    //Views
+    private lateinit var textViewActivityButton: Button
+
+    //Layouts
     private lateinit var constraintLayoutButton: Button
     private lateinit var relativeLayoutButton: Button
     private lateinit var linearLayoutButton: Button
@@ -55,11 +62,9 @@ class EmailSenderActivity : AppCompatActivity() {
         val concreteObserver: ConcreteObserver = ConcreteObserver()
         val concreteObserverTwo: ConcreteObserverTwo = ConcreteObserverTwo()
 
-
         mainActivityViewModel.personaLiveData.observe(this){
             Log.d(TAG,"$it")
         }
-
 
         mainActivityViewModel.observee.addObserver(concreteObserver)
         mainActivityViewModel.observee.addObserver(concreteObserverTwo)
@@ -70,11 +75,7 @@ class EmailSenderActivity : AppCompatActivity() {
             mainActivityViewModel.updateLiveData()
         }
 
-
-
         Log.d(TAG, "onCreate()")
-
-
         Log.d(TAG,mainActivityViewModel.getDatabaseName())
         val textMessage = "javo"
         val sendIntent = Intent()
@@ -129,11 +130,13 @@ class EmailSenderActivity : AppCompatActivity() {
             flag = true
         }
 
+        /** VIEWMODEL EXAMPLE (Change Variable) **/
+        /* Updating two variables. A local variable and a ViewModel variable,
+         * display the variables in TextViews and see the lifecycle of each one
+         */
         val changeVariableButton:Button = findViewById(R.id.changeVariableButton)
         val variableTextView:TextView =  findViewById(R.id.variable)
         val variableViewModelTextView:TextView = findViewById(R.id.viewModelTextView)
-
-        //TODO Create a new button to separate functionality @javarmgar x2
 
         changeVariableButton.setOnClickListener {
             variableTextView.text = "Havi"
@@ -145,7 +148,7 @@ class EmailSenderActivity : AppCompatActivity() {
         variableViewModelTextView.text = mainActivityViewModel.variable
 
 
-        // START ACTIVITY FOR RESULT EXAMPLE
+        /** ACTIVITY FOR RESULT EXAMPLE **/
         pickupContactButton = findViewById(R.id.pickUpButton)
         pickupContactButton.setOnClickListener {
             val pickUpContactIntent = Intent(this ,PickUpContactActivity::class.java).apply{
@@ -156,13 +159,14 @@ class EmailSenderActivity : AppCompatActivity() {
                 PICK_UP_CONTACT_REQUEST_ID
             )
         }
+        /** START OF LAYOUT SESSIONS**/
 
         linearLayoutButton = findViewById(R.id.linear_layout_button)
         relativeLayoutButton = findViewById(R.id.relative_layout_button)
         constraintLayoutButton = findViewById(R.id.constraint_layout_button)
 
         linearLayoutButton.setOnClickListener {
-            val intentLinearLayout = Intent(this,LinearLayoutActivity::class.java)
+            val intentLinearLayout = Intent(this, LinearLayoutActivity::class.java)
             startActivity(intentLinearLayout)
         }
 
@@ -176,11 +180,11 @@ class EmailSenderActivity : AppCompatActivity() {
             startActivity(intentConstraintLayout)
         }
 
-        // START OF VIEWS ACTIVITY SESSION
-        viewsActivityButton = findViewById<Button>(R.id.views_button)
-        viewsActivityButton.setOnClickListener {
-
-            val intentViewsActivity = Intent(this,ViewsActivity::class.java)
+        /** START OF VIEWS ACTIVITY SESSION**/
+        //Text View
+        textViewActivityButton = findViewById<Button>(R.id.views_button)
+        textViewActivityButton.setOnClickListener {
+            val intentViewsActivity = Intent(this, TextViewActivity::class.java)
             startActivity(intentViewsActivity)
         }
 

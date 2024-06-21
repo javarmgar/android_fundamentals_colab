@@ -1,25 +1,17 @@
-package com.example.androidfundamentalsapp
+package com.example.androidfundamentalsapp.viewmodel
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.androidfundamentalsapp.Database
 import patterns.observer.ConcreteObservee
-import patterns.observer.Observee
 import patterns.observer.Persona
 
 class MainActivityViewModel : ViewModel() {
     var variable: String = "TheViewModelTextView"
     private val TAG = "MainActivityViewModel"
     val observee:ConcreteObservee = ConcreteObservee()
-
     val personaLiveData:MutableLiveData<Persona> = MutableLiveData(Persona("Havier Guadalupe",22))
-
-    override fun onCleared() {
-        super.onCleared()
-        Log.d(TAG,"onCleared()")
-    }
-
 
     fun changeVariable(s: String) {
         variable = s
@@ -27,6 +19,11 @@ class MainActivityViewModel : ViewModel() {
 
     fun getDatabaseName():String{
         return Database.DB_NAME
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.d(TAG,"onCleared()")
     }
 
     fun updateObservee(){

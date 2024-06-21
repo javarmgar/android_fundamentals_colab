@@ -1,4 +1,4 @@
-package com.example.androidfundamentalsapp
+package com.example.androidfundamentalsapp.views
 
 import android.os.Bundle
 import android.text.Editable
@@ -10,8 +10,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.androidfundamentalsapp.R
 
-class ViewsActivity : AppCompatActivity() {
+class TextViewActivity : AppCompatActivity() {
     private lateinit var textView3: TextView
     private lateinit var textView2: TextView
     private lateinit var editTextViews: EditText
@@ -42,6 +43,11 @@ class ViewsActivity : AppCompatActivity() {
         changeTextButton.setOnClickListener {
             textView1.text = "Programmatically text"
         }
+
+        /***
+         * Edit Text Listener:
+         * Used to update distinct text views
+         */
         editTextViews.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 

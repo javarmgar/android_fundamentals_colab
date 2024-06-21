@@ -1,10 +1,11 @@
-package com.example.androidfundamentalsapp
+package com.example.androidfundamentalsapp.layouts
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.androidfundamentalsapp.R
 
 class LinearLayoutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
