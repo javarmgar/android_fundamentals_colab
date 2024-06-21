@@ -28,7 +28,7 @@
             android:name=".PickUpContactActivity"
             android:exported="false" />
         <activity
-            android:name=".EmailSenderActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

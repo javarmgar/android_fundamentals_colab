@@ -18,7 +18,7 @@ class PickUpContactActivity : AppCompatActivity() {
 
         //StartActivityForResult Example
 
-        val contactIdFromIntent = intent.getIntExtra(EmailSenderActivity.CONTACT_ID_KEY,0)
+        val contactIdFromIntent = intent.getIntExtra(MainActivity.CONTACT_ID_KEY,0)
         Log.d(TAG, "Contact Id: $contactIdFromIntent")
         //NAME /LAST NAME /ADDRESS
         val pickUpIntentResult = Intent().apply {

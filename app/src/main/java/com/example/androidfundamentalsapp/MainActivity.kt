@@ -20,7 +20,7 @@ import patterns.observer.ConcreteObserverTwo
 import java.util.Stack
 
 
-class EmailSenderActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     //Views
     private lateinit var textViewActivityButton: Button
@@ -54,7 +54,7 @@ class EmailSenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_email_sender)
+        setContentView(R.layout.activity_main)
 
         //ViewModel
         mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
