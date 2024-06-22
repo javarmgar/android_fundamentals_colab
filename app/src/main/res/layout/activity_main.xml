@@ -123,8 +123,15 @@
                 android:id="@+id/views_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Open Views Activity"
+                android:text="Open Text View Activity"
                 />
+
+            <Button
+                android:id="@+id/edit_text_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Edit Text Activity"
+            />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

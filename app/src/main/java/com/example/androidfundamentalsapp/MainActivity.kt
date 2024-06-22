@@ -14,6 +14,7 @@ import com.example.androidfundamentalsapp.layouts.ConstraintLayoutActivity
 import com.example.androidfundamentalsapp.layouts.LinearLayoutActivity
 import com.example.androidfundamentalsapp.layouts.RelativeLayoutActivity
 import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
+import com.example.androidfundamentalsapp.views.EditTextActivity
 import com.example.androidfundamentalsapp.views.TextViewActivity
 import patterns.observer.ConcreteObserver
 import patterns.observer.ConcreteObserverTwo
@@ -22,8 +23,10 @@ import java.util.Stack
 
 class MainActivity : AppCompatActivity() {
 
+
     //Views
     private lateinit var textViewActivityButton: Button
+    private lateinit var editTextActivityButton: Button
 
     //Layouts
     private lateinit var constraintLayoutButton: Button
@@ -185,6 +188,13 @@ class MainActivity : AppCompatActivity() {
         textViewActivityButton = findViewById<Button>(R.id.views_button)
         textViewActivityButton.setOnClickListener {
             val intentViewsActivity = Intent(this, TextViewActivity::class.java)
+            startActivity(intentViewsActivity)
+        }
+
+        //Edit Text
+        editTextActivityButton = findViewById<Button>(R.id.edit_text_button)
+        editTextActivityButton.setOnClickListener {
+            val intentViewsActivity = Intent(this, EditTextActivity::class.java)
             startActivity(intentViewsActivity)
         }
 
