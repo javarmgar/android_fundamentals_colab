@@ -12,7 +12,7 @@
         android:id="@+id/view_chain1"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         android:background="@color/gray_1"
         app:layout_constraintEnd_toStartOf="@id/view_chain2"
@@ -24,7 +24,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:background="@color/gray_1"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         app:layout_constraintEnd_toStartOf="@id/view_chain3"
         app:layout_constraintStart_toEndOf="@id/view_chain1"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
         android:id="@+id/view_chain3"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/view_chain2"
@@ -43,7 +43,7 @@
         android:id="@+id/view_chain4"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintEnd_toStartOf="@id/view_chain5"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +74,7 @@
         android:id="@+id/view_chain7"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         app:layout_constraintHorizontal_bias="0.15"
         android:layout_marginHorizontal="4dp"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -109,7 +109,7 @@
         android:id="@+id/view_chain10"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:layout_marginHorizontal="4dp"
         app:layout_constraintHorizontal_weight="1"
         android:background="@color/gray_1"
@@ -161,7 +161,7 @@
         android:layout_height="50dp"
         android:layout_marginHorizontal="4dp"
 
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintEnd_toStartOf="@+id/view_chain14"
         app:layout_constraintStart_toStartOf="parent"
@@ -186,7 +186,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="4dp"
         app:layout_constrainedWidth="true"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintEnd_toStartOf="@+id/view_chain16"
         app:layout_constraintStart_toStartOf="parent"
@@ -226,7 +226,7 @@
         app:layout_constraintWidth_max="390dp"
         android:layout_marginHorizontal="4dp"
         app:layout_constrainedWidth="true"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -236,7 +236,7 @@
 
     <Button
         android:id="@+id/visibility_button"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/view_chain17"
@@ -280,7 +280,7 @@
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintWidth_default="wrap"
         app:layout_constraintWidth_percent=".20"
-        android:layout_marginVertical="16dp"
+        android:layout_marginVertical="@dimen/margin_regular"
         android:background="#05290A"
         app:layout_constraintTop_toBottomOf="@id/visibility_view2"
         app:layout_goneMarginStart="8dp"
@@ -309,7 +309,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         app:layout_constraintVertical_bias="0.85"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_regular"
         android:background="#3C0C0C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline_2"
@@ -320,7 +320,7 @@
         android:id="@+id/view_6"
         android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_regular"
         android:background="#052008"
         app:layout_constraintBottom_toTopOf="@id/view_4"
         app:layout_constraintEnd_toStartOf="@id/guideline_2"
@@ -333,8 +333,8 @@
         android:id="@+id/view_1"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/margin_regular"
+        android:layout_marginTop="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline_1" />
@@ -343,7 +343,7 @@
         android:id="@+id/view_2"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintStart_toEndOf="@id/view_1"
         app:layout_constraintTop_toTopOf="@id/view_1" />
@@ -352,7 +352,7 @@
         android:id="@+id/view_3"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintStart_toEndOf="@id/view_2"
         app:layout_constraintTop_toTopOf="@id/view_1" />
@@ -361,8 +361,8 @@
         android:id="@+id/view_4"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/margin_regular"
+        android:layout_marginTop="@dimen/margin_regular"
         android:background="@color/gray_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -376,7 +376,7 @@
     <!--        android:id="@+id/view2"-->
     <!--        android:layout_width="100dp"-->
     <!--        android:layout_height="50dp"-->
-    <!--        android:layout_marginVertical="16dp"-->
+    <!--        android:layout_marginVertical="@dimen/margin_regular"-->
     <!--        android:background="@color/gray_2"-->
     <!--        app:layout_constraintStart_toEndOf="@id/view1"-->
     <!--            app:layout_constraintTop_toBottomOf="@id/view1"-->

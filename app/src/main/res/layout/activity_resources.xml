@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResourcesActivity">
+
+    <Button
+        android:id="@+id/button_resources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/margin_regular"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/button_state_colors"
+        android:text="Button"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/margin_regular"
+        app:layout_constraintStart_toEndOf="@+id/button_resources"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@raw/churros"/>
+
+<!--        app:srcCompat="@drawable/churros"-->
+
+    <ImageButton
+        android:id="@+id/states_buton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="States"
+        android:src="@drawable/button_states"
+        app:layout_constraintTop_toBottomOf="@id/button_resources"
+        app:layout_constraintStart_toStartOf="@id/button_resources"/>
+
+    <TextView
+        android:id="@+id/hard_code_style_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Styled Text"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_size_regular"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/style_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Styled Text"
+        style="@style/text_regular_style"
+        app:layout_constraintTop_toBottomOf="@id/hard_code_style_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

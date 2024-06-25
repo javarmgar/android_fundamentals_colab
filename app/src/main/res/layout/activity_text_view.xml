@@ -5,19 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.TextViewActivity">
+    tools:context=".viewsActivity.TextViewActivity">
 
 
     <Button
         android:id="@+id/change_text_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="@color/white"
         android:fontFamily="@font/annie_use_your_telescope"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_regular"
         android:text="Change Text"
         android:textSize="20sp"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="@dimen/margin_regular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/edit_text_1"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -26,7 +26,7 @@
         android:id="@+id/edit_text_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="@dimen/margin_regular"
         android:hint="Write"
         android:layout_marginVertical="4dp"
         android:gravity=""

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_size_regular"
+        -->
+    <style name="text_regular_style">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_regular</item>
+    </style>
+</resources>

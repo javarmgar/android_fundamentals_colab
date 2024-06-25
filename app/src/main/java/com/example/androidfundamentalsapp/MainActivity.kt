@@ -14,8 +14,8 @@ import com.example.androidfundamentalsapp.layouts.ConstraintLayoutActivity
 import com.example.androidfundamentalsapp.layouts.LinearLayoutActivity
 import com.example.androidfundamentalsapp.layouts.RelativeLayoutActivity
 import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
-import com.example.androidfundamentalsapp.views.EditTextActivity
-import com.example.androidfundamentalsapp.views.TextViewActivity
+import com.example.androidfundamentalsapp.viewsActivity.EditTextActivity
+import com.example.androidfundamentalsapp.viewsActivity.TextViewActivity
 import patterns.observer.ConcreteObserver
 import patterns.observer.ConcreteObserverTwo
 import java.util.Stack
@@ -23,6 +23,9 @@ import java.util.Stack
 
 class MainActivity : AppCompatActivity() {
 
+
+    //Resources
+    private lateinit var resourcesButton: Button
 
     //Views
     private lateinit var textViewActivityButton: Button
@@ -197,6 +200,14 @@ class MainActivity : AppCompatActivity() {
             val intentViewsActivity = Intent(this, EditTextActivity::class.java)
             startActivity(intentViewsActivity)
         }
+
+        /** START OF RESOURCES*/
+        resourcesButton = findViewById<Button>(R.id.resources_button)
+        resourcesButton.setOnClickListener {
+            val intentResourcesActivity = Intent(this,ResourcesActivity::class.java)
+            startActivity(intentResourcesActivity)
+        }
+
 
     }
 

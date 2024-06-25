@@ -26,14 +26,14 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="finish()" />
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Send Email"
                 />
 
@@ -41,7 +41,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="TextView"
                 />
 
@@ -49,7 +49,7 @@
                 android:id="@+id/editTextText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:ems="10"
                 android:inputType="text"
                 android:text="Name"
@@ -59,7 +59,7 @@
                 android:id="@+id/variable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="ActivityTextView"
                 />
 
@@ -67,7 +67,7 @@
                 android:id="@+id/changeVariableButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Change Variable"
                 />
 
@@ -75,7 +75,7 @@
                 android:id="@+id/viewModelTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="ViewModelTextView"
                 />
 
@@ -83,7 +83,7 @@
                 android:id="@+id/buttonUpdateObservee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Update Observee"
                 />
 
@@ -91,7 +91,7 @@
                 android:id="@+id/pickUpButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Pick up contact"
                 />
 
@@ -99,7 +99,7 @@
                 android:id="@+id/linear_layout_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Open Linear Layout"
                 />
 
@@ -107,7 +107,7 @@
                 android:id="@+id/relative_layout_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Open Relative Layout"
                 />
 
@@ -115,7 +115,7 @@
                 android:id="@+id/constraint_layout_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Open Constraint Layout"
                 />
 
@@ -123,6 +123,7 @@
                 android:id="@+id/views_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Open Text View Activity"
                 />
 
@@ -130,8 +131,17 @@
                 android:id="@+id/edit_text_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
                 android:text="Open Edit Text Activity"
             />
+
+            <Button
+                android:id="@+id/resources_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
+                android:text="Open Resources  Activity"
+                />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

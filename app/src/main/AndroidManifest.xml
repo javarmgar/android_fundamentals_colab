@@ -13,10 +13,13 @@
         android:theme="@style/Theme.AndroidFundamentalsApp"
         tools:targetApi="31">
         <activity
-            android:name=".views.EditTextActivity"
+            android:name=".ResourcesActivity"
             android:exported="false" />
         <activity
-            android:name=".views.TextViewActivity"
+            android:name=".viewsActivity.EditTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewsActivity.TextViewActivity"
             android:exported="false" />
         <activity
             android:name=".layouts.ConstraintLayoutActivity"

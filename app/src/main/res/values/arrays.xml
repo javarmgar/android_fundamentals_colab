@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer-array name="example_integer">
+      <item>3</item>
+      <item>5</item>
+  </integer-array>
+
+    <string-array name="example_string">
+        <item>Havi</item>
+        <item>Jabi</item>
+        <item>Javier</item>
+    </string-array>
+</resources>
