@@ -1,10 +1,11 @@
-package com.example.androidfundamentalsapp
+package com.example.androidfundamentalsapp.resourcesactivity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.androidfundamentalsapp.R
 
 class ResourcesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

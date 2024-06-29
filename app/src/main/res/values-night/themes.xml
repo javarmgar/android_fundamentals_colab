@@ -1,7 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.AndroidFundamentalsApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="Theme.AndroidFundamentalsApp" parent="Base.Theme.AndroidFundamentalsApp">
+        <item name="text_size_havi_theme">@dimen/font_size_big</item>
+        <item name="background_tint_havi_theme">@color/green_2</item>
+    </style>
+
 </resources>

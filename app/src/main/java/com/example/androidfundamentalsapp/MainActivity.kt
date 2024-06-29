@@ -13,6 +13,9 @@ import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.NAME_K
 import com.example.androidfundamentalsapp.layouts.ConstraintLayoutActivity
 import com.example.androidfundamentalsapp.layouts.LinearLayoutActivity
 import com.example.androidfundamentalsapp.layouts.RelativeLayoutActivity
+import com.example.androidfundamentalsapp.resourcesactivity.AppResourcesActivity
+import com.example.androidfundamentalsapp.resourcesactivity.ResourcesActivity
+import com.example.androidfundamentalsapp.stylesandthemes.StylesAndThemesActivity
 import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
 import com.example.androidfundamentalsapp.viewsActivity.EditTextActivity
 import com.example.androidfundamentalsapp.viewsActivity.TextViewActivity
@@ -24,8 +27,11 @@ import java.util.Stack
 class MainActivity : AppCompatActivity() {
 
 
+    private lateinit var stylesThemesButton: Button
+
     //Resources
     private lateinit var resourcesButton: Button
+    private lateinit var appResourcesButton: Button
 
     //Views
     private lateinit var textViewActivityButton: Button
@@ -204,8 +210,22 @@ class MainActivity : AppCompatActivity() {
         /** START OF RESOURCES*/
         resourcesButton = findViewById<Button>(R.id.resources_button)
         resourcesButton.setOnClickListener {
-            val intentResourcesActivity = Intent(this,ResourcesActivity::class.java)
+            val intentResourcesActivity = Intent(this, ResourcesActivity::class.java)
             startActivity(intentResourcesActivity)
+        }
+
+        //App Resources
+        appResourcesButton = findViewById<Button>(R.id.app_resources_button)
+        appResourcesButton.setOnClickListener {
+            val intentAppResourcesActivity = Intent(this, AppResourcesActivity::class.java)
+            startActivity(intentAppResourcesActivity)
+        }
+
+        //Styles and themes
+        stylesThemesButton = findViewById<Button>(R.id.app_styles_and_themes_button)
+        stylesThemesButton.setOnClickListener {
+            val intentStylesThemesActivity = Intent(this, StylesAndThemesActivity::class.java)
+            startActivity(intentStylesThemesActivity)
         }
 
 

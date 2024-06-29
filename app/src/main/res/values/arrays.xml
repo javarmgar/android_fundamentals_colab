@@ -3,6 +3,11 @@
   <integer-array name="example_integer">
       <item>3</item>
       <item>5</item>
+      <item>7</item>
+      <item>9</item>
+      <item>33</item>
+      <item>7</item>
+      <item>9</item>
   </integer-array>
 
     <string-array name="example_string">

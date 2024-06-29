@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResourcesActivity">
+    tools:context=".resourcesactivity.ResourcesActivity">
 
     <Button
         android:id="@+id/button_resources"
@@ -19,11 +19,16 @@
         android:text="Button"/>
 
     <ImageView
+
         android:id="@+id/imageView"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
         android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+
         android:layout_margin="@dimen/margin_regular"
-        app:layout_constraintStart_toEndOf="@+id/button_resources"
+        app:layout_constraintStart_toEndOf="@id/button_resources"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@raw/churros"/>
 

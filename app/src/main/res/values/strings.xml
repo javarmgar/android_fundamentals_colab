@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidFundamentalsApp</string>
+    <string name="hello_world">Hello World Habi</string>
+    <string name="text_button_local_themes">Hola Javier</string>
+    <string name="text_button_styles_themes">Hola Habier</string>
+    <string name="text_button_themes">Hola Jabyer</string>
 </resources>

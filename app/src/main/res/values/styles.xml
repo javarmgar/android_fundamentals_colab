@@ -10,4 +10,21 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/font_size_regular</item>
     </style>
+<!--
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"
+-->
+    <style name="button_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#5E1717</item>
+        <item name="android:backgroundTint">@color/blue</item>
+    </style>
+
+    <style name="button_style_themes" parent="Theme.AndroidFundamentalsApp">
+        <item name="android:textSize">?attr/text_size_havi_theme</item>
+<!--        <item name="android:textColor">@style/text_color_havi_theme</item>-->
+        <item name="android:backgroundTint">?attr/background_tint_havi_theme</item>
+    </style>
+
 </resources>

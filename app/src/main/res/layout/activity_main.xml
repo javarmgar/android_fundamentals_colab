@@ -142,6 +142,22 @@
                 android:layout_margin="@dimen/margin_regular"
                 android:text="Open Resources  Activity"
                 />
+
+            <Button
+                android:id="@+id/app_resources_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
+                android:text="Open App Resources  Activity"
+                />
+
+            <Button
+                android:id="@+id/app_styles_and_themes_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
+                android:text="Open App Styles Activity"
+                />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

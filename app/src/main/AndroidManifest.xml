@@ -13,7 +13,16 @@
         android:theme="@style/Theme.AndroidFundamentalsApp"
         tools:targetApi="31">
         <activity
-            android:name=".ResourcesActivity"
+            android:name=".stylesandthemes.StylesAndThemesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".resourcesactivity.ShapeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".resourcesactivity.AppResourcesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".resourcesactivity.ResourcesActivity"
             android:exported="false" />
         <activity
             android:name=".viewsActivity.EditTextActivity"

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_regular">16dp</dimen>
+
+
+    <!--Font dimens-->
+
+    <dimen name="font_size_small">18sp</dimen>
     <dimen name="font_size_regular">24sp</dimen>
+    <dimen name="font_size_big">28sp</dimen>
+
+    <!--Padding dimens-->
+    <dimen name="padding_0dp">100dp</dimen>
 </resources>
