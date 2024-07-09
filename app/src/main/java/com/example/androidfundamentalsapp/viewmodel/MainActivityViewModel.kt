@@ -4,13 +4,13 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.androidfundamentalsapp.Database
-import patterns.observer.ConcreteObservee
-import patterns.observer.Persona
+import com.example.androidfundamentalsapp.patterns.observer.ConcreteObservee
+import com.example.androidfundamentalsapp.patterns.observer.Persona
 
 class MainActivityViewModel : ViewModel() {
     var variable: String = "TheViewModelTextView"
     private val TAG = "MainActivityViewModel"
-    val observee:ConcreteObservee = ConcreteObservee()
+    val observee: ConcreteObservee = ConcreteObservee()
     val personaLiveData:MutableLiveData<Persona> = MutableLiveData(Persona("Havier Guadalupe",22))
 
     fun changeVariable(s: String) {

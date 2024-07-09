@@ -38,10 +38,10 @@
         android:id="@+id/states_buton"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:text="States"
         android:src="@drawable/button_states"
-        app:layout_constraintTop_toBottomOf="@id/button_resources"
-        app:layout_constraintStart_toStartOf="@id/button_resources"/>
+        android:text="States"
+        app:layout_constraintStart_toStartOf="@id/button_resources"
+        app:layout_constraintTop_toBottomOf="@id/button_resources" />
 
     <TextView
         android:id="@+id/hard_code_style_text_view"

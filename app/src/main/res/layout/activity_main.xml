@@ -158,6 +158,13 @@
                 android:layout_margin="@dimen/margin_regular"
                 android:text="Open App Styles Activity"
                 />
+            <Button
+                android:id="@+id/dynamic_views_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
+                android:text="Open dynamic views Activity"
+                />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

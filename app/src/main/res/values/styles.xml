@@ -27,4 +27,58 @@
         <item name="android:backgroundTint">?attr/background_tint_havi_theme</item>
     </style>
 
+    <!--
+        Guidelines for fonts
+
+        h_<textSize>_<fontFamily>_<fontType>_<textStyle>_<gravity>_color
+            <textSize>    -> {23,16,14,12,}
+            <fontFamily>  -> {roboto,os,}            -> {roboto, open sans, default font if omitted}
+            <fontType>    -> {sb,m,r,}               -> {semibold, medium, regular}
+            <textStyle>   -> {n,i,b}                 -> {normal, italic, bold}
+            <gravity>     -> {c,l,r,}                -> {center,left,right}
+            color -> { category_level } ->  category = [primary, secondary, accent, error, success, warning, info, light, dark, neutral, background]
+                level = l1, l2, l3
+                -> {color_1, particular color for that type of text}
+        -->
+    <!--Text styles-->
+
+    <style name="h_16_os_sb_b_l_primary_l1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="h_16_os_sb_b_c_primary_l1" parent="h_16_os_sb_b_l_primary_l1">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="h_14_ws_m_n_c_secondary_l2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="h_16_ws_r_n_l_primary_l3">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="h_14_ws_m_n_c_secondary_l1" >
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="h_14_ws_m_n_l_primary_l3" parent="h_14_ws_m_n_c_secondary_l1">
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="h_14_os_sb_b_c_primary_l1" parent ="h_16_os_sb_b_l_primary_l1">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="h_14_os_b_b_c_primary_l1" parent ="h_14_os_sb_b_c_primary_l1">
+    </style>
+
 </resources>

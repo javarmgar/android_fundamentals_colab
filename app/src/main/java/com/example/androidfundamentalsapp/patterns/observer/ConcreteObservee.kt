@@ -1,9 +1,9 @@
-package patterns.observer
+package com.example.androidfundamentalsapp.patterns.observer
 
-class ConcreteObservee:Observee {
+class ConcreteObservee: Observee {
 
     override val observers: MutableList<Observer> = mutableListOf()
-    var value:Persona = Persona("Javier Armenta", 22)
+    var value: Persona = Persona("Javier Armenta", 22)
     override fun addObserver(observer: Observer) {
         observers.add(observer)
     }

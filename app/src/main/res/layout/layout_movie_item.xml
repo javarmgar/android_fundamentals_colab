@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/text_view_title"
+        style="@style/h_14_os_b_b_c_primary_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title:"
+        app:layout_constraintEnd_toStartOf="@id/text_view_title_value"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/text_view_title_value"
+        style="@style/h_14_os_b_b_c_primary_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textStyle="normal"
+        android:text="UP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_title"
+        app:layout_constraintTop_toTopOf="@id/text_view_title" />
+
+
+    <TextView
+        android:id="@+id/text_view_year"
+        style="@style/h_14_os_b_b_c_primary_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year:"
+        app:layout_constraintEnd_toStartOf="@id/text_view_year_value"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title" />
+    <TextView
+        android:id="@+id/text_view_year_value"
+        style="@style/h_14_os_b_b_c_primary_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textStyle="normal"
+        android:text="2007"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_year"
+        app:layout_constraintTop_toTopOf="@id/text_view_year" />
+
+    <TextView
+        android:id="@+id/text_view_rating"
+        style="@style/h_14_os_b_b_c_primary_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating:"
+        app:layout_constraintEnd_toStartOf="@id/text_view_rating_value"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@id/text_view_year" />
+    <TextView
+        android:id="@+id/text_view_rating_value"
+        style="@style/h_14_os_b_b_c_primary_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textStyle="normal"
+        android:text="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_rating"
+        app:layout_constraintTop_toTopOf="@id/text_view_rating" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

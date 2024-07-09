@@ -4,4 +4,7 @@
     <string name="text_button_local_themes">Hola Javier</string>
     <string name="text_button_styles_themes">Hola Habier</string>
     <string name="text_button_themes">Hola Jabyer</string>
+    <string name="text_simple_list_view">Simple list view</string>
+    <string name="text_custom_list_view">Custom List View</string>
+    <string name="text_recycler_view">Recycler View</string>
 </resources>

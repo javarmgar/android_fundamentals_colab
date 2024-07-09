@@ -1,4 +1,4 @@
-package patterns.observer
+package com.example.androidfundamentalsapp.patterns.observer
 
 import android.util.Log
 

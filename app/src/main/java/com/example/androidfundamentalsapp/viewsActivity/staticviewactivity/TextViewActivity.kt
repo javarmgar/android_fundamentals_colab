@@ -1,4 +1,4 @@
-package com.example.androidfundamentalsapp.viewsActivity
+package com.example.androidfundamentalsapp.viewsActivity.staticviewactivity
 
 import android.os.Bundle
 import android.text.Editable

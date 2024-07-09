@@ -13,20 +13,23 @@ import com.example.androidfundamentalsapp.PickUpContactActivity.Companion.NAME_K
 import com.example.androidfundamentalsapp.layouts.ConstraintLayoutActivity
 import com.example.androidfundamentalsapp.layouts.LinearLayoutActivity
 import com.example.androidfundamentalsapp.layouts.RelativeLayoutActivity
+import com.example.androidfundamentalsapp.patterns.adapter.Client
 import com.example.androidfundamentalsapp.resourcesactivity.AppResourcesActivity
 import com.example.androidfundamentalsapp.resourcesactivity.ResourcesActivity
 import com.example.androidfundamentalsapp.stylesandthemes.StylesAndThemesActivity
 import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
-import com.example.androidfundamentalsapp.viewsActivity.EditTextActivity
-import com.example.androidfundamentalsapp.viewsActivity.TextViewActivity
-import patterns.observer.ConcreteObserver
-import patterns.observer.ConcreteObserverTwo
+import com.example.androidfundamentalsapp.viewsActivity.staticviewactivity.EditTextActivity
+import com.example.androidfundamentalsapp.viewsActivity.staticviewactivity.TextViewActivity
+import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserver
+import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserverTwo
+import com.example.androidfundamentalsapp.viewsActivity.dynamicviewsactivity.DynamicViewsActivity
 import java.util.Stack
 
 
 class MainActivity : AppCompatActivity() {
 
 
+    private lateinit var dynamicViewsButton: Button
     private lateinit var stylesThemesButton: Button
 
     //Resources
@@ -228,6 +231,25 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentStylesThemesActivity)
         }
 
+        //views
+        //dynamic views
+        dynamicViewsButton = findViewById<Button>(R.id.dynamic_views_button)
+        dynamicViewsButton.setOnClickListener {
+            val intent = Intent(this, DynamicViewsActivity::class.java)
+            startActivity(intent)
+        }
+        /** DESIGN PATTERNS*/
+        setDesignPatterns()
+    }
+
+    private fun setDesignPatterns() {
+        setAdapterPattern()
+    }
+
+    private fun setAdapterPattern() {
+        // Adapter
+        val client:Client = Client()
+        client.methodName()
 
     }
 
