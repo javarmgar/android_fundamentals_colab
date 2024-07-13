@@ -14,15 +14,16 @@ import com.example.androidfundamentalsapp.layouts.ConstraintLayoutActivity
 import com.example.androidfundamentalsapp.layouts.LinearLayoutActivity
 import com.example.androidfundamentalsapp.layouts.RelativeLayoutActivity
 import com.example.androidfundamentalsapp.patterns.adapter.Client
+import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserver
+import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserverTwo
+import com.example.androidfundamentalsapp.patterns.singleton.ClientSingleton
 import com.example.androidfundamentalsapp.resourcesactivity.AppResourcesActivity
 import com.example.androidfundamentalsapp.resourcesactivity.ResourcesActivity
 import com.example.androidfundamentalsapp.stylesandthemes.StylesAndThemesActivity
 import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
+import com.example.androidfundamentalsapp.viewsActivity.dynamicviewsactivity.DynamicViewsActivity
 import com.example.androidfundamentalsapp.viewsActivity.staticviewactivity.EditTextActivity
 import com.example.androidfundamentalsapp.viewsActivity.staticviewactivity.TextViewActivity
-import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserver
-import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserverTwo
-import com.example.androidfundamentalsapp.viewsActivity.dynamicviewsactivity.DynamicViewsActivity
 import java.util.Stack
 
 
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pickupContactButton: Button
 
     private lateinit var mainActivityViewModel: MainActivityViewModel
-    var TAG = "EmailSenderActivity"
+    var TAG = "MainActivity"
     private lateinit var button: Button
     var flag:Boolean = false
 
@@ -78,7 +79,7 @@ class MainActivity : AppCompatActivity() {
         val concreteObserverTwo: ConcreteObserverTwo = ConcreteObserverTwo()
 
         mainActivityViewModel.personaLiveData.observe(this){
-            Log.d(TAG,"$it")
+            Log.d(TAG,"personaLiveData $it")
         }
 
         mainActivityViewModel.observee.addObserver(concreteObserver)
@@ -244,6 +245,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setDesignPatterns() {
         setAdapterPattern()
+        // Singleton Pattern in Java
+        setSingletonPattern()
+    }
+
+    private fun setSingletonPattern() {
+        ClientSingleton.main()
     }
 
     private fun setAdapterPattern() {
