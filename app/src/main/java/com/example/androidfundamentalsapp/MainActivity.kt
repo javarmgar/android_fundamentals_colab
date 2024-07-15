@@ -17,8 +17,10 @@ import com.example.androidfundamentalsapp.patterns.adapter.Client
 import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserver
 import com.example.androidfundamentalsapp.patterns.observer.ConcreteObserverTwo
 import com.example.androidfundamentalsapp.patterns.singleton.ClientSingleton
+import com.example.androidfundamentalsapp.patterns.singleton.ClientSingletonV2
 import com.example.androidfundamentalsapp.resourcesactivity.AppResourcesActivity
 import com.example.androidfundamentalsapp.resourcesactivity.ResourcesActivity
+import com.example.androidfundamentalsapp.retrofitActivity.RetrofitActivity
 import com.example.androidfundamentalsapp.stylesandthemes.StylesAndThemesActivity
 import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
 import com.example.androidfundamentalsapp.viewsActivity.dynamicviewsactivity.DynamicViewsActivity
@@ -30,6 +32,7 @@ import java.util.Stack
 class MainActivity : AppCompatActivity() {
 
 
+    private lateinit var retrofitButton: Button
     private lateinit var dynamicViewsButton: Button
     private lateinit var stylesThemesButton: Button
 
@@ -239,18 +242,29 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DynamicViewsActivity::class.java)
             startActivity(intent)
         }
+
+        //retrofit
+        retrofitButton = findViewById<Button>(R.id.retrofit_button)
+        retrofitButton.setOnClickListener {
+            val intent = Intent(this, RetrofitActivity::class.java)
+            startActivity(intent)
+        }
+
         /** DESIGN PATTERNS*/
         setDesignPatterns()
     }
 
     private fun setDesignPatterns() {
         setAdapterPattern()
-        // Singleton Pattern in Java
+        // Singleton Pattern
         setSingletonPattern()
     }
 
     private fun setSingletonPattern() {
         ClientSingleton.main()
+        //Kotlin
+        ClientSingletonV2.main()
+
     }
 
     private fun setAdapterPattern() {

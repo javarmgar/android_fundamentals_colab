@@ -165,6 +165,13 @@
                 android:layout_margin="@dimen/margin_regular"
                 android:text="Open dynamic views Activity"
                 />
+            <Button
+                android:id="@+id/retrofit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
+                android:text="Open retrofit Activity"
+                />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
