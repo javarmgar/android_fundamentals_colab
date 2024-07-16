@@ -24,7 +24,7 @@ class MainActivityViewModel : ViewModel() {
         return Database.DB_NAME
     }
 
-    override fun onCleared() {
+    override fun onCleared(){
         super.onCleared()
         Log.d(TAG,"onCleared()")
     }
