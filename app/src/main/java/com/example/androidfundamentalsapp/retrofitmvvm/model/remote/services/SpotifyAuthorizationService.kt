@@ -1,17 +1,12 @@
-package com.example.androidfundamentalsapp.retrofitActivity.data.services
+package com.example.androidfundamentalsapp.retrofitmvvm.model.remote.services
 
-import com.example.androidfundamentalsapp.retrofitActivity.data.services.response.TokenResponse
+import com.example.androidfundamentalsapp.retrofitmvvm.model.remote.services.response.TokenResponse
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
-interface SpotifyAccountService {
-
-//    @FormUrlEncoded
-//    @POST("token")
-//    fun getAccessToken(@Body tokenRequest: TokenRequest): Call<TokenResponse>
-
+interface SpotifyAuthorizationService {
     @FormUrlEncoded
     @POST("token")
     fun getAccessToken(

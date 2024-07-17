@@ -15,7 +15,7 @@
         android:theme="@style/Theme.AndroidFundamentalsApp"
         tools:targetApi="31">
         <activity
-            android:name=".retrofitActivity.RetrofitActivity"
+            android:name=".retrofitmvvm.view.RetrofitActivity"
             android:exported="true"
             android:launchMode="singleTop">
             <intent-filter>

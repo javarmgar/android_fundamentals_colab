@@ -20,7 +20,7 @@ import com.example.androidfundamentalsapp.patterns.singleton.ClientSingleton
 import com.example.androidfundamentalsapp.patterns.singleton.ClientSingletonV2
 import com.example.androidfundamentalsapp.resourcesactivity.AppResourcesActivity
 import com.example.androidfundamentalsapp.resourcesactivity.ResourcesActivity
-import com.example.androidfundamentalsapp.retrofitActivity.RetrofitActivity
+import com.example.androidfundamentalsapp.retrofitmvvm.view.RetrofitActivity
 import com.example.androidfundamentalsapp.stylesandthemes.StylesAndThemesActivity
 import com.example.androidfundamentalsapp.viewmodel.MainActivityViewModel
 import com.example.androidfundamentalsapp.viewsActivity.dynamicviewsactivity.DynamicViewsActivity

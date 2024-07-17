@@ -1,4 +1,4 @@
-package com.example.androidfundamentalsapp.retrofitActivity.data.services.response
+package com.example.androidfundamentalsapp.retrofitmvvm.model.remote.services.response
 
 import com.google.gson.annotations.SerializedName
 

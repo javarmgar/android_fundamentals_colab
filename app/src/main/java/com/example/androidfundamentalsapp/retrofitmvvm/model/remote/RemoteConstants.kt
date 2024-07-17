@@ -1,4 +1,4 @@
-package com.example.androidfundamentalsapp.retrofitActivity.data
+package com.example.androidfundamentalsapp.retrofitmvvm.model.remote
 
 object RemoteConstants {
     val CLIENT_ID = "fdbc87739f9e45e894e2e0844542806b"

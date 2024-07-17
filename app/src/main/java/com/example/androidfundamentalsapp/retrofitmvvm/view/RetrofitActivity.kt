@@ -1,9 +1,11 @@
-package com.example.androidfundamentalsapp.retrofitActivity
+package com.example.androidfundamentalsapp.retrofitmvvm.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,9 +13,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.androidfundamentalsapp.R
-import com.example.androidfundamentalsapp.viewmodel.RetrofitActivityViewModel
+import com.example.androidfundamentalsapp.retrofitmvvm.viewmodel.RetrofitActivityViewModel
 
 class RetrofitActivity : AppCompatActivity() {
+    //Playlists variables
+    private lateinit var buttonShowPlaylists: Button
+    private lateinit var editTextUserId: EditText
+
     private lateinit var retrofitActivityViewModel: RetrofitActivityViewModel
     private lateinit var startOAuthButton: Button
 
@@ -34,6 +40,25 @@ class RetrofitActivity : AppCompatActivity() {
             Toast.makeText(this,"getting The OAuth code ", Toast.LENGTH_LONG).show()
             val intent = retrofitActivityViewModel.getAuthorizationIntent()
             startActivity(intent)
+        }
+
+        //user playlists
+        editTextUserId = findViewById<EditText>(R.id.edit_text_user_id)
+        buttonShowPlaylists = findViewById<Button>(R.id.button_show_playlists)
+
+        //Observer
+        retrofitActivityViewModel.isTokenAvailable.observe(this){
+            if(it == true){
+                editTextUserId.visibility = View.VISIBLE
+                buttonShowPlaylists.visibility = View.VISIBLE
+            }else{
+                editTextUserId.visibility = View.GONE
+                buttonShowPlaylists.visibility = View.GONE
+            }
+        }
+
+        buttonShowPlaylists.setOnClickListener {
+            retrofitActivityViewModel.onGetPlaylists(userId = editTextUserId.text.toString())
         }
     }
 
