@@ -268,8 +268,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setAdapterPattern() {
+
+        val applicationContainer = (application as MyApplication).applicationContainer
         // Adapter
-        val client:Client = Client()
+        val client:Client = applicationContainer.client()
         client.methodName()
 
     }
