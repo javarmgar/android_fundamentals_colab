@@ -27,10 +27,13 @@ import com.example.androidfundamentalsapp.viewsActivity.dynamicviewsactivity.Dyn
 import com.example.androidfundamentalsapp.viewsActivity.staticviewactivity.EditTextActivity
 import com.example.androidfundamentalsapp.viewsActivity.staticviewactivity.TextViewActivity
 import java.util.Stack
+import javax.inject.Inject
 
 
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var client: Client
 
     private lateinit var retrofitButton: Button
     private lateinit var dynamicViewsButton: Button
@@ -72,6 +75,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        (application as MyApplication).applicationContainer.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -268,10 +272,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setAdapterPattern() {
-
-        val applicationContainer = (application as MyApplication).applicationContainer
         // Adapter
-        val client:Client = applicationContainer.client()
         client.methodName()
 
     }

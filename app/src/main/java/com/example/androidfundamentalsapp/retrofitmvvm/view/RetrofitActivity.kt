@@ -12,10 +12,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
+import com.example.androidfundamentalsapp.MyApplication
 import com.example.androidfundamentalsapp.R
+import com.example.androidfundamentalsapp.retrofitmvvm.model.remote.services.SpotifyAuthorizationService
 import com.example.androidfundamentalsapp.retrofitmvvm.viewmodel.RetrofitActivityViewModel
+import javax.inject.Inject
 
 class RetrofitActivity : AppCompatActivity() {
+
+    //Injected variables
+    @Inject
+    lateinit var spotifyAuthService: SpotifyAuthorizationService
     //Playlists variables
     private lateinit var buttonShowPlaylists: Button
     private lateinit var editTextUserId: EditText
@@ -24,6 +31,7 @@ class RetrofitActivity : AppCompatActivity() {
     private lateinit var startOAuthButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        ( this.application as MyApplication).applicationContainer.inject(this)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_retrofit)
@@ -66,7 +74,7 @@ class RetrofitActivity : AppCompatActivity() {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         Log.d(LOG_TAG, "handleNewIntent" )
-        retrofitActivityViewModel.getCodeFromIntent(intent)
+        retrofitActivityViewModel.getCodeFromIntent(intent,spotifyAuthService)
     }
 
 

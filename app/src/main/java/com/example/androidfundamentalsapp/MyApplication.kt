@@ -8,4 +8,8 @@ class MyApplication : Application() {
 
     val applicationContainer: ApplicationContainer = DaggerApplicationContainer.create()
 
+    override fun onCreate() {
+        super.onCreate()
+    }
+
 }

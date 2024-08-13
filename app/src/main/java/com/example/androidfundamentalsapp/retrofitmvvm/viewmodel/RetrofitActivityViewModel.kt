@@ -8,6 +8,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.androidfundamentalsapp.retrofitmvvm.model.remote.RemoteConstants
 import com.example.androidfundamentalsapp.retrofitmvvm.model.remote.WebServiceManager
+import com.example.androidfundamentalsapp.retrofitmvvm.model.remote.services.SpotifyAuthorizationService
 import com.example.androidfundamentalsapp.retrofitmvvm.model.remote.services.response.GetPlaylistResponse
 import com.example.androidfundamentalsapp.retrofitmvvm.model.remote.services.response.TokenResponse
 import com.example.androidfundamentalsapp.retrofitmvvm.view.RetrofitActivity
@@ -44,7 +45,7 @@ class RetrofitActivityViewModel:ViewModel() {
         return Intent(Intent.ACTION_VIEW, authUri)
     }
 
-    fun getCodeFromIntent(intent: Intent?) {
+    fun getCodeFromIntent(intent: Intent?, spotifyAuthService: SpotifyAuthorizationService) {
 
         intent?.data?.let { uri: Uri ->
             if (uri.toString().startsWith(RemoteConstants.REDIRECT_URI)) {
@@ -52,14 +53,14 @@ class RetrofitActivityViewModel:ViewModel() {
                 val output = "The code is $code "
                 Log.d(RetrofitActivity.LOG_TAG, output)
                 code?.let {
-                    onGetAccessToken(code = it)
+                    onGetAccessToken(code = it,spotifyAuthService)
                 }
             }
         }
     }
 
-    fun onGetAccessToken(code: String){
-        val spotifyAuthService = WebServiceManager.getSpotifyAuthorizationService()
+    fun onGetAccessToken(code: String,spotifyAuthService: SpotifyAuthorizationService){
+
 
         val callAccessToken: Call<TokenResponse> = spotifyAuthService.getAccessToken(
             code = code,
